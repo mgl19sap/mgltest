@@ -1,9 +1,4 @@
 apiVersion: ai.sap.com/v1alpha1
-kind: Scenario
-metadata:
-  name: hello-scenario
----
-apiVersion: ai.sap.com/v1alpha1
 kind: Workflow
 metadata:
   name: hello-pipeline
@@ -13,13 +8,4 @@ spec:
     - name: main
       image: alpine:latest
       command: ["sh", "-c"]
-      args: ["echo 'Hello from SAP AI Core!'"]
----
-apiVersion: ai.sap.com/v1alpha1
-kind: Executable
-metadata:
-  name: hello-exec
-spec:
-  scenarioName: hello-scenario
-  workflow:
-    name: hello-pipeline
+      args: ["echo '🎉 Hello from SAP AI Core – it works!'"]
