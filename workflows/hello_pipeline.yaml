@@ -13,4 +13,3 @@ spec:
         image: alpine:latest
         command: ["sh", "-c"]
         args: ["echo 'Hello from SAP AI Core!'"]
-
