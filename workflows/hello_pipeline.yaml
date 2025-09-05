@@ -1,10 +1,12 @@
-apiVersion: ai.sap.com/v1alpha1
-kind: Workflow
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
 metadata:
   name: hello-pipeline
   annotations:
-    scenario.ai.sap.com/name: "hello-scenario"
-    scenario.ai.sap.com/description: "Minimal Hello World pipeline for testing"
+    scenarios.ai.sap.com/name: "Tutorial"
+    scenarios.ai.sap.com/description: "Intro to SAP AI Core"
+    executables.ai.sap.com/name: "hello"
+    executables.ai.sap.com/description: "Greets the user"
 spec:
   entrypoint: main
   templates:
