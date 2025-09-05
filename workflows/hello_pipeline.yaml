@@ -1,17 +1,11 @@
-apiVersion: argoproj.io/v1alpha1
-kind: WorkflowTemplate
+apiVersion: ai.sap.com/v1alpha1
+kind: Workflow
 metadata:
   name: hello-pipeline
-  annotations:
-    scenarios.ai.sap.com/name: "Tutorial"
-    scenarios.ai.sap.com/description: "Intro to SAP AI Core"
-    executables.ai.sap.com/name: "hello"
-    executables.ai.sap.com/description: "Greets the user"
 spec:
   entrypoint: main
   templates:
     - name: main
-      container:
-        image: alpine:latest
-        command: ["sh", "-c"]
-        args: ["echo 'Hello from SAP AI Core!'"]
+      image: alpine:latest
+      command: ["sh", "-c"]
+      args: ["echo 'Hello from SAP AI Core!'"]
